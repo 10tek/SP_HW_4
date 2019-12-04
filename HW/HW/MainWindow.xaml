@@ -1,0 +1,24 @@
+﻿<Window x:Class="HW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <RichTextBox x:Name="richTB" Grid.ColumnSpan="2" Background="Beige" FontSize="25"></RichTextBox>
+        <Button x:Name="downloadBtn" Grid.Row="1" Grid.Column="1" Content="Загрузить" FontSize="25" Click="DownloadBtnClick"></Button>
+        <TextBox x:Name="urlTB" Grid.Row="1" Background="AliceBlue" FontSize="25" Text="Введите URL" GotFocus="UrlTBGotFocus"></TextBox>
+        <ProgressBar x:Name="progressBar" IsIndeterminate="True" Minimum="0" Maximum="100" Value="39" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Hidden"></ProgressBar>
+    </Grid>
+</Window>
