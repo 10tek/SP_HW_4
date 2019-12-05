@@ -35,7 +35,7 @@ namespace HW
         {
             if (string.IsNullOrEmpty(urlTB.Text) || urlTB.Text == "Введите URL")
             {
-                MessageBox.Show("Пшлнх");
+                MessageBox.Show("Вы не ввели URL!");
                 return;
             }
             url = urlTB.Text;
